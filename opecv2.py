@@ -11,14 +11,14 @@ def func1():
         time.sleep(2)
 
 
-def func2():
-    print("FUCK2")
-    try:
+try:
+    def func2():
+        print("FUCK2")
         while True:
             print("func2")
             time.sleep(2)
-    except KeyboardInterrupt():
-        print("fin")
+except KeyboardInterrupt:
+    print("fin")
     
 if __name__ == "__main__":
     thread_1 = threading.Thread(target=func1)
@@ -28,6 +28,7 @@ if __name__ == "__main__":
     time.sleep(1)
     thread_2.start()
 degree=0
+"""
 try:
     while True:
         print("(-90 ~ 90)の範囲で回転角度数を入力してください")
@@ -35,4 +36,4 @@ try:
         dc = 2.5 + (12.0-2.5)/180*(degree+90)
         print('現在の角度'+str(degree))
 except KeyboardInterrupt:
-    print('!!FINISH!!')
+    print('!!FINISH!!')"""
