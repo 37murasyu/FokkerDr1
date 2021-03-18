@@ -1,4 +1,4 @@
-"""import time
+import time
 import threading
 
 
@@ -12,18 +12,21 @@ def func1():
 
 
 def func2():
-    while True:
-        print("func2")
-        time.sleep(2)
-
-
+    print("FUCK2")
+    try:
+        while True:
+            print("func2")
+            time.sleep(2)
+    except KeyboardInterrupt():
+        print("fin")
+    
 if __name__ == "__main__":
     thread_1 = threading.Thread(target=func1)
     thread_2 = threading.Thread(target=func2)
 
     thread_1.start()
     time.sleep(1)
-    thread_2.start()"""
+    thread_2.start()
 degree=0
 try:
     while True:
